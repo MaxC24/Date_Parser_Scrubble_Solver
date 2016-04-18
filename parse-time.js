@@ -1,4 +1,11 @@
-var parseTime = function(string){
+//Write a library from scratch that can parse date strings and 
+// convert them to a valid ISO 8601 date/time format. 
+// Every value in this list should be supported.
+
+//Sorry, not the most elegant code and I didn't really have time to refactor.
+
+
+var parseDate = function(string){
 	if(/\d+-\d+-\d+/.test(string)) return string;
 	var year = getYear(string);
 	string = replaceIt(string, year);
@@ -143,4 +150,4 @@ function replaceIt(string, it){
 	return string.replace(it, '');
 }
 
-module.exports = parseTime;
+module.exports = parseDate;
